@@ -1204,9 +1204,6 @@ Pass a positive integer as an argument to override a bot's default speed.
 	if(!length(path))
 		addtimer(CALLBACK(src, PROC_REF(set_path), null), 0.6 SECONDS) // Enough time for the animate to finish
 
-/mob/living/simple_animal/bot/rust_heretic_act()
-	adjustBruteLoss(400)
-
 /mob/living/simple_animal/bot/get_hit_area_message(input_area)
 	// we just get hit, there's no complexity for hitting an arm (if it exists) or anything.
 	// we also need to return an empty string as otherwise it would falsely say that we get hit in the chest or something strange like that (bots don't have "chests")

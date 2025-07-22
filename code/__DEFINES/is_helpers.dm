@@ -324,7 +324,6 @@ GLOBAL_LIST_INIT(book_types, typecacheof(list(
 	/obj/item/infuser_book,
 	/obj/item/storage/photo_album,
 	/obj/item/storage/card_binder,
-	/obj/item/codex_cicatrix,
 	/obj/item/toy/eldritch_book,
 	/obj/item/toy/talking/codex_gigas,
 	/obj/item/book_of_babel,

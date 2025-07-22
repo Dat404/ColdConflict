@@ -11,7 +11,6 @@
 	cult_examine_tip = "Can be used to create eldritch whetstones, construct shells, and flasks of unholy water."
 	icon_state = "talismanaltar"
 	break_message = span_warning("The altar shatters, leaving only the wailing of the damned!")
-	mansus_conversion_path = /obj/effect/heretic_rune
 
 /obj/structure/destructible/cult/item_dispenser/altar/setup_options()
 	var/static/list/altar_items = list(

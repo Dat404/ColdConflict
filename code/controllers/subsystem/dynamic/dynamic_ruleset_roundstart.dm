@@ -98,18 +98,6 @@
 /datum/dynamic_ruleset/roundstart/changeling/assign_role(datum/mind/candidate)
 	candidate.add_antag_datum(/datum/antagonist/changeling)
 
-/datum/dynamic_ruleset/roundstart/heretic
-	name = "Heretics"
-	config_tag = "Roundstart Heretics"
-	preview_antag_datum = /datum/antagonist/heretic
-	pref_flag = ROLE_HERETIC
-	weight = 3
-	max_antag_cap = list("denominator" = 24)
-	min_pop = 30 // Ensures good spread of sacrifice targets
-
-/datum/dynamic_ruleset/roundstart/heretic/assign_role(datum/mind/candidate)
-	candidate.add_antag_datum(/datum/antagonist/heretic)
-
 /datum/dynamic_ruleset/roundstart/wizard
 	name = "Wizard"
 	config_tag = "Roundstart Wizard"

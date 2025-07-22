@@ -20,7 +20,6 @@
 		/datum/corpse_damage/cause_of_death/melee_weapon/esword = 1,
 		/datum/corpse_damage/cause_of_death/melee_weapon/changeling = 1,
 		/datum/corpse_damage/cause_of_death/melee_weapon/toolbox = 1,
-		/datum/corpse_damage/cause_of_death/melee_weapon/heretic = 1,
 		/datum/corpse_damage/cause_of_death/explosion = 1,
 		/datum/corpse_damage/cause_of_death/plasmafire = 1,
 		/datum/corpse_damage/cause_of_death/projectile/bullet = 1,

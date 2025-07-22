@@ -220,10 +220,3 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 	return M != seer
 
 /datum/atom_hud/alternate_appearance/basic/food_demands
-
-/datum/atom_hud/alternate_appearance/basic/heretic
-
-/datum/atom_hud/alternate_appearance/basic/heretic/mobShouldSee(mob/M)
-	if(IS_HERETIC(M))
-		return TRUE
-	return FALSE

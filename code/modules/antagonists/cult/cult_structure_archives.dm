@@ -13,7 +13,6 @@
 	light_range = 1.5
 	light_color = LIGHT_COLOR_FIRE
 	break_message = span_warning("The books and tomes of the archives burn into ash as the desk shatters!")
-	mansus_conversion_path = /obj/item/codex_cicatrix
 
 /obj/structure/destructible/cult/item_dispenser/archives/setup_options()
 	var/static/list/archive_items = list(
@@ -44,15 +43,7 @@
 		options += extra_item
 
 /obj/structure/destructible/cult/item_dispenser/archives/extra_options()
-	if(!cult_team?.unlocked_heretic_items[CRIMSON_MEDALLION_UNLOCKED])
-		return
-	return list(CRIMSON_MEDALLION = list(
-			PREVIEW_IMAGE = image(icon = 'icons/obj/clothing/neck.dmi', icon_state = "crimson_medallion"),
-			OUTPUT_ITEMS = list(/obj/item/clothing/neck/heretic_focus/crimson_medallion),
-			RADIAL_DESC = "Creates a [/obj/item/clothing/neck/heretic_focus/crimson_medallion::name], a powerful artifact that provides passive healing and the ability to prepare an additional spell. \
-				It can also be squished in hand, consuming it for a powerful healing effect.",
-			),
-	)
+	return
 
 /obj/structure/destructible/cult/item_dispenser/archives/succcess_message(mob/living/user, obj/item/spawned_item)
 	to_chat(user, span_cult_italic("You summon [spawned_item] from [src]!"))

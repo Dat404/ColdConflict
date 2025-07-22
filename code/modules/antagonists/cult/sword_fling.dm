@@ -46,10 +46,6 @@
 			resist_chance = 5 // your mastahs
 			fail_text = "You struggle, but [loccer]'s grip is unnaturally hard to resist!"
 			particle_to_spawn = /obj/effect/temp_visual/cult/sparks
-		if(IS_HERETIC_OR_MONSTER(loccer) || IS_LUNATIC(loccer))
-			resist_chance = 10
-			fail_text = "You struggle, but [loccer] deftly handles the grip movement."
-			particle_to_spawn = /obj/effect/temp_visual/eldritch_sparks
 		if(loccer.mind?.holy_role) // IS_PRIEST()
 			resist_chance = 6
 			fail_text = "You struggle, but [loccer]'s holy grip holds tight against your thrashing."

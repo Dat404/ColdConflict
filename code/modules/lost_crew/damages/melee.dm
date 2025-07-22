@@ -36,10 +36,3 @@
 /datum/corpse_damage/cause_of_death/melee_weapon/toolbox
 	cause_of_death = "when some worthless assistant toolboxed me!"
 	weapon = /obj/item/storage/toolbox
-
-/datum/corpse_damage/cause_of_death/melee_weapon/heretic
-	cause_of_death = "when a flipping heretic attacked me!"
-
-/datum/corpse_damage/cause_of_death/melee_weapon/heretic/get_weapon(mob/living/carbon/human/body)
-	var/obj/item/melee/sickly_blade/blade = pick(subtypesof(/obj/item/melee/sickly_blade)) //pick a random blade, can be a bunch of fun stuff
-	return new blade (null)

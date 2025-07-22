@@ -59,7 +59,6 @@
 /proc/get_random_coin()
 	var/list/blocked = list(
 		/obj/item/coin/gold/debug,
-		/obj/item/coin/eldritch,
 		/obj/item/coin/mythril,
 	)
 	var/list/extra_coins = list(

@@ -21,13 +21,6 @@
 		on_clear_callback = CALLBACK(src, PROC_REF(on_anomaly_neutralized)), \
 		effects_we_clear = list(/obj/effect/anomaly))
 
-	// Can also be used to delete drained heretic influences, to stop fools from losing arms.
-	AddComponent(/datum/component/effect_remover, \
-		success_feedback = "You close %THEEFFECT with %THEWEAPON, frying its circuitry in the process.", \
-		tip_text = "Close rift", \
-		on_clear_callback = CALLBACK(src, PROC_REF(on_use)), \
-		effects_we_clear = list(/obj/effect/visible_heretic_influence))
-
 /**
  * Callback for the effect remover component to handle neutralizing anomalies.
  */

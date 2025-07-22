@@ -179,50 +179,34 @@ Striking a noncultist, however, will tear their flesh."}
 	var/static/list/heretic_paths_to_haunted_sword_abilities = list(
 		// Ash
 		PATH_ASH = list(
-			WIELDER_SPELLS = list(/datum/action/cooldown/spell/jaunt/ethereal_jaunt/ash),
-			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/ash_beams),
 			SWORD_PREFIX = "ashen",
 		),
 		// Flesh
 		PATH_FLESH = list(
-			WIELDER_SPELLS = list(/datum/action/cooldown/spell/pointed/blood_siphon),
-			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/cleave),
 			SWORD_PREFIX = "sanguine",
 		),
 		// Void
 		PATH_VOID = list(
-			WIELDER_SPELLS = list(/datum/action/cooldown/spell/pointed/void_phase),
-			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/void_prison),
 			SWORD_PREFIX = "tenebrous",
 		),
 		// Blade
 		PATH_BLADE = list(
-			WIELDER_SPELLS = list(/datum/action/cooldown/spell/pointed/projectile/furious_steel/haunted),
-			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/projectile/furious_steel/solo),
 			SWORD_PREFIX = "keen",
 		),
 		// Rust
 		PATH_RUST = list(
-			WIELDER_SPELLS = list(/datum/action/cooldown/spell/cone/staggered/entropic_plume),
-			SWORD_SPELLS = list(/datum/action/cooldown/spell/aoe/rust_conversion, /datum/action/cooldown/spell/pointed/rust_construction),
 			SWORD_PREFIX = "rusted",
 		),
 		// Cosmic
 		PATH_COSMIC = list(
-			WIELDER_SPELLS = list(/datum/action/cooldown/spell/conjure/cosmic_expansion),
-			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/projectile/star_blast),
 			SWORD_PREFIX = "astral",
 		),
 		// Lock
 		PATH_LOCK = list(
-			WIELDER_SPELLS = list(/datum/action/cooldown/spell/pointed/burglar_finesse),
-			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/apetra_vulnera),
 			SWORD_PREFIX = "incisive",
 		),
 		// Moon
 		PATH_MOON = list(
-			WIELDER_SPELLS = list(/datum/action/cooldown/spell/pointed/projectile/moon_parade),
-			SWORD_SPELLS = list(/datum/action/cooldown/spell/pointed/moon_smile),
 			SWORD_PREFIX = "shimmering",
 		),
 		// Starter
@@ -268,8 +252,6 @@ Striking a noncultist, however, will tear their flesh."}
 		on_priest_handle(user)
 	else if(IS_CULTIST_OR_CULTIST_MOB(user))
 		on_cultist_handle(user)
-	else if(IS_HERETIC_OR_MONSTER(user) || IS_LUNATIC(user))
-		on_heresy_handle(user)
 	else if(IS_WIZARD(user))
 		on_wizard_handle(user)
 	else
@@ -286,7 +268,7 @@ Striking a noncultist, however, will tear their flesh."}
 	return TRUE
 
 /obj/item/melee/cultblade/haunted/proc/on_cultist_handle(mob/living/user, actiontype)
-	var/binding_implements = list(/obj/item/melee/cultblade/dagger, /obj/item/melee/sickly_blade/cursed)
+	var/binding_implements = list(/obj/item/melee/cultblade/dagger)
 	if(!user.is_holding_item_of_types(binding_implements))
 		to_chat(user, span_notice("You need to hold a ritual dagger to bind [src]!"))
 		return
@@ -300,11 +282,6 @@ Striking a noncultist, however, will tear their flesh."}
 	return TRUE
 
 /obj/item/melee/cultblade/haunted/proc/on_heresy_handle(mob/living/user, actiontype)
-	// todo make the former a subtype of latter
-	var/binding_implements = list(/obj/item/clothing/neck/eldritch_amulet, /obj/item/clothing/neck/heretic_focus)
-	if(!user.is_holding_item_of_types(binding_implements))
-		to_chat(user, span_notice("You need to hold a focus to bind [src]!"))
-		return
 
 	user.visible_message(span_cult_bold("You channel the Mansus through your focus, empowering the sealing runes..."), span_cult_bold("[user] holds up their eldritch focus on top of [src] and begins concentrating..."))
 	if(!do_after(user, 6 SECONDS, src))
@@ -376,7 +353,6 @@ Striking a noncultist, however, will tear their flesh."}
 /obj/item/melee/cultblade/haunted/Initialize(mapload, mob/soul_to_bind, mob/awakener, do_bind = TRUE)
 	. = ..()
 
-	AddElement(/datum/element/heretic_focus)
 	add_traits(list(TRAIT_CASTABLE_LOC, TRAIT_SPELLS_TRANSFER_TO_LOC), INNATE_TRAIT)
 	if(do_bind && !mapload)
 		bind_soul(soul_to_bind, awakener)
@@ -402,26 +378,11 @@ Striking a noncultist, however, will tear their flesh."}
 	// Get the heretic's new body and antag datum.
 	trapped_entity = trapped_mind?.current
 	trapped_entity.PossessByPlayer(trapped_mind?.key)
-	var/datum/antagonist/heretic/heretic_holder = GET_HERETIC(trapped_entity)
-	if(!heretic_holder)
-		stack_trace("[soul_to_bind] in but not a heretic on the heretic soul blade.")
 
 	// Give the spirit a spell that lets them try to fly around.
 	var/datum/action/cooldown/spell/pointed/sword_fling/fling_act = \
 	new /datum/action/cooldown/spell/pointed/sword_fling(trapped_mind, to_fling = src)
 	fling_act.Grant(trapped_entity)
-
-	// Set the sword's path for spell selection.
-	heretic_path = heretic_holder.heretic_path
-
-	// Copy the objectives to keep for roundend, remove the datum as neither us nor the heretic need it anymore
-	var/list/copied_objectives = heretic_holder.objectives.Copy()
-	trapped_entity.mind.remove_antag_datum(/datum/antagonist/heretic)
-
-	// Add the fallen antag datum, give them a heads-up of what's happening.
-	var/datum/antagonist/soultrapped_heretic/bozo = new()
-	bozo.objectives |= copied_objectives
-	trapped_entity.mind.add_antag_datum(bozo)
 
 	// Assigning the spells to give to the wielder and spirit.
 	// Let them cast the given spell.

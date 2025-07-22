@@ -117,9 +117,6 @@
 			guilty(attacked_mob, "for being a light-consuming nightmare!")
 		if(guilty_conscience.has_antag_datum(/datum/antagonist/ninja))
 			guilty(attacked_mob, "for their misaligned association with the Spider Clan!")
-		var/datum/antagonist/heretic/heretic_datum = guilty_conscience.has_antag_datum(/datum/antagonist/heretic)
-		if(heretic_datum?.ascended)
-			guilty(attacked_mob, "for blasphemous, heretical, out of control worship!")
 
 /**
  * Called by hooked signals whenever someone attacks the person with this trauma

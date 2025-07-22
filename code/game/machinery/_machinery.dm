@@ -1235,9 +1235,6 @@
 	dropped_atom.pixel_x = -8 + ((.%3)*8)
 	dropped_atom.pixel_y = -8 + (round( . / 3)*8)
 
-/obj/machinery/rust_heretic_act()
-	take_damage(500, BRUTE, MELEE, 1)
-
 /obj/machinery/vv_edit_var(vname, vval)
 	if(vname == NAMEOF(src, occupant))
 		set_occupant(vval)

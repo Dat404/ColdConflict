@@ -59,9 +59,6 @@
 /obj/structure/examine_descriptor(mob/user)
 	return "structure"
 
-/obj/structure/rust_heretic_act()
-	take_damage(500, BRUTE, "melee", 1)
-
 /obj/structure/zap_act(power, zap_flags)
 	if(zap_flags & ZAP_OBJ_DAMAGE)
 		take_damage(power * 2.5e-4, BURN, "energy")

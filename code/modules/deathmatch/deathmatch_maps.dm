@@ -236,8 +236,6 @@
 	allowed_loadouts = list(
 		/datum/outfit/deathmatch_loadout/cultish/invoker,
 		/datum/outfit/deathmatch_loadout/cultish/artificer,
-		/datum/outfit/deathmatch_loadout/heresy/warrior,
-		/datum/outfit/deathmatch_loadout/heresy/scribe,
 		/datum/outfit/deathmatch_loadout/holy_crusader,
 		/datum/outfit/deathmatch_loadout/clock_cult,
 	)

@@ -116,7 +116,6 @@
 	uniform = /obj/item/clothing/under/rank/civilian/chaplain
 	suit = /obj/item/clothing/suit/hooded/chaplain_hoodie
 	shoes = /obj/item/clothing/shoes/laceup
-	neck = /obj/item/clothing/neck/fake_heretic_amulet
 	head = /obj/item/clothing/head/hooded/chaplain_hood
 	back = /obj/item/storage/backpack/cultpack
 

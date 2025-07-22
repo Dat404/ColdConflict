@@ -31,7 +31,6 @@
 				/obj/item/card/id/advanced/gold/captains_spare,
 				/obj/item/card/emag,
 				/obj/item/circular_saw,
-				/obj/item/codex_cicatrix,
 				/obj/item/grenade/c4,
 				/obj/item/gun/ballistic/revolver,
 				/obj/item/gun/energy/e_gun/hos,

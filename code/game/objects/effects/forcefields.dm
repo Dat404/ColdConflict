@@ -119,8 +119,6 @@
 	var/mob/living/living_mover = mover
 	if(living_mover.can_block_magic(antimagic_flags, charge_cost = 0))
 		return ..()
-	if(living_mover.has_status_effect(/datum/status_effect/star_mark))
-		return FALSE
 	return ..()
 
 /obj/effect/forcefield/cosmic_field/fast
