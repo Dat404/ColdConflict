@@ -623,13 +623,10 @@
 /obj/item/mod/core/soul/proc/get_backlash_type(mob/living/checked)
 	switch(theme)
 		if(THEME_CULT)
-			if(!(IS_CULTIST(checked) || IS_HERETIC(checked) || HAS_MIND_TRAIT(checked, TRAIT_MAGICALLY_GIFTED)))
+			if(!(IS_CULTIST(checked) || HAS_MIND_TRAIT(checked, TRAIT_MAGICALLY_GIFTED)))
 				return /datum/mood_event/soul_core_torment
-		if(THEME_HERETIC)
-			if(!(IS_CULTIST(checked) || IS_HERETIC(checked) || HAS_MIND_TRAIT(checked, TRAIT_MAGICALLY_GIFTED)))
-				return /datum/mood_event/soul_core_torment/heretic
 		if(THEME_HOLY)
-			if(IS_CULTIST(checked) || IS_HERETIC(checked))
+			if(IS_CULTIST(checked))
 				return /datum/mood_event/soul_core_torment
 			if(IS_WIZARD(checked))
 				return /datum/mood_event/soul_core_discomfort

@@ -368,7 +368,6 @@
 	l_hand = /obj/item/gun/ballistic/shotgun/hook
 	r_hand = /obj/item/gun/ballistic/shotgun/hook
 	uniform = /obj/item/clothing/under/costume/skeleton
-	suit = /obj/item/clothing/suit/hooded/cultrobes/eldritch
 	mask = /obj/item/clothing/mask/gas/cyborg
 	shoes = /obj/item/clothing/shoes/sandal
 	belt = /obj/item/melee/cleric_mace
@@ -963,9 +962,7 @@
 	//species_override = /datum/species/plasmaman
 
 	head = /obj/item/clothing/head/hooded/cult_hoodie/berserkerhood
-	neck = /obj/item/clothing/neck/heretic_focus/crimson_medallion
 	suit = /obj/item/clothing/suit/hooded/cultrobes/berserker
-	suit_store = /obj/item/melee/sickly_blade/cursed
 	uniform = /obj/item/clothing/under/color/red
 	id_trim = null
 	belt = /obj/item/melee/cultblade/dagger
@@ -1003,97 +1000,6 @@
 	. = ..()
 	ADD_TRAIT(user, TRAIT_ACT_AS_HERETIC, REF(src))
 	user.AddElement(/datum/element/leeching_walk)
-
-	// Creates the knowledge as an isolated datum inside the target, allowing passive knowledges to work still.
-	for(var/datum/heretic_knowledge/knowhow as anything in knowledge_to_grant)
-		knowhow = new knowhow(user)
-		knowhow.on_gain(user, null)
-
-// Heretic Warrior
-
-/datum/outfit/deathmatch_loadout/heresy/warrior
-	name = "Deathmatch: Heretic Warrior"
-	display_name = "Heretic Warrior"
-	desc = "Prove the furious strength of the Mansus!"
-
-	head = /obj/item/clothing/head/hooded/cult_hoodie/eldritch
-	neck = /obj/item/clothing/neck/heretic_focus
-	suit = /obj/item/clothing/suit/hooded/cultrobes/eldritch
-	suit_store = /obj/item/melee/sickly_blade/dark
-	uniform = /obj/item/clothing/under/color/darkgreen
-	id_trim = null
-	belt = /obj/item/melee/sickly_blade/rust
-	gloves = null
-	shoes = /obj/item/clothing/shoes/sandal
-	l_pocket = /obj/item/flashlight/lantern/jade/on
-	r_pocket = /obj/item/melee/rune_carver
-	l_hand = null
-
-	back = /obj/item/storage/backpack
-
-	backpack_contents = list(
-		/obj/item/reagent_containers/cup/beaker/eldritch,
-		/obj/item/reagent_containers/cup/beaker/eldritch,
-		/obj/item/eldritch_potion/wounded,
-		/obj/item/eldritch_potion/wounded,
-	)
-
-	// I mean is it really that bad if they don't even know half this stuff is added to them.
-	// It's like, forbidden knowledge. It fits with the mansus theme - great excuse for poor design!
-	knowledge_to_grant = list(
-		/datum/heretic_knowledge/blade_grasp,
-		/datum/heretic_knowledge/blade_dance,
-		/datum/heretic_knowledge/blade_upgrade/blade,
-	)
-
-	spells_to_add = list(
-		/datum/action/cooldown/spell/touch/mansus_grasp,
-		/datum/action/cooldown/spell/realignment,
-		/datum/action/cooldown/spell/pointed/projectile/furious_steel,
-		/datum/action/cooldown/spell/cone/staggered/entropic_plume,
-		/datum/action/cooldown/spell/pointed/rust_construction,
-	)
-
-// Heretic Scribe
-
-/datum/outfit/deathmatch_loadout/heresy/scribe
-	name = "Deathmatch: Heretic Scribe"
-	display_name = "Heretic Scribe"
-	desc = "Reveal the forgotten knowledge of the Mansus."
-
-	head = /obj/item/clothing/head/helmet/chaplain/witchunter_hat
-	mask = /obj/item/clothing/mask/madness_mask
-	neck = /obj/item/clothing/neck/eldritch_amulet
-	suit = /obj/item/clothing/suit/hooded/cultrobes/void
-	suit_store = /obj/item/melee/sickly_blade
-	uniform = /obj/item/clothing/under/costume/gamberson/military
-	id_trim = null
-	belt = /obj/item/storage/belt/unfathomable_curio
-	gloves = null
-	shoes = /obj/item/clothing/shoes/winterboots/ice_boots
-	l_pocket = /obj/item/ammo_box/strilka310/lionhunter
-	r_pocket = /obj/item/ammo_box/strilka310/lionhunter
-
-	back = /obj/item/gun/ballistic/rifle/lionhunter // for his neutral b, he wields a gun
-
-	belt_contents = list(
-		/obj/item/heretic_labyrinth_handbook,
-		/obj/item/heretic_labyrinth_handbook,
-		/obj/item/eldritch_potion/duskndawn,
-		/obj/item/eldritch_potion/duskndawn,
-	)
-
-	knowledge_to_grant = list(
-		/datum/heretic_knowledge/cosmic_grasp,
-	)
-
-	spells_to_add = list(
-		/datum/action/cooldown/spell/touch/mansus_grasp,
-		/datum/action/cooldown/spell/pointed/projectile/star_blast,
-		/datum/action/cooldown/spell/touch/star_touch,
-		/datum/action/cooldown/spell/aoe/void_pull,
-		/datum/action/cooldown/spell/pointed/void_phase,
-	)
 
 // Chaplain! No spells (other than smoke), but strong armor and weapons, and immune to others' spells
 

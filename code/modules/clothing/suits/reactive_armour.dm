@@ -489,4 +489,4 @@
 	return TRUE
 
 /obj/item/clothing/suit/armor/reactive/ectoplasm/emp_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	owner.reagents?.add_reagent(/datum/reagent/inverse/helgrasp, 20)
+	owner.reagents?.add_reagent(/datum/reagent/water, 20)

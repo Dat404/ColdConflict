@@ -303,25 +303,3 @@
 	duration = 15 SECONDS
 	affects_others = TRUE
 	random_hallucination_weight = 0
-
-// Hallucination used by heretic paintings
-/datum/hallucination/delusion/preset/heretic
-	dynamic_delusion = TRUE
-	random_hallucination_weight = 0
-	delusion_name = "Heretic"
-	affects_others = TRUE
-	affects_us = FALSE
-	duration = 11 SECONDS
-
-/datum/hallucination/delusion/preset/heretic/make_delusion_image(mob/over_who)
-	// This code is dummy hot for DUMB reasons so let's not make a mob constantly yeah?
-	var/static/mutable_appearance/heretic_appearance
-	if(isnull(heretic_appearance))
-		heretic_appearance = get_dynamic_human_appearance(/datum/outfit/heretic, r_hand = NO_REPLACE)
-	delusion_appearance = heretic_appearance
-	return ..()
-
-/datum/hallucination/delusion/preset/heretic/gate
-	delusion_name = "Mind Gate"
-	duration = 60 SECONDS
-	affects_us = TRUE

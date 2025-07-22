@@ -7,7 +7,6 @@
 	set_holdable(GLOB.tool_items + list(
 		/obj/item/clothing/gloves,
 		/obj/item/radio,
-		/obj/item/melee/sickly_blade/lock,
 		/obj/item/reagent_containers/cup/soda_cans,
 	))
 
@@ -323,18 +322,9 @@
 /datum/storage/unfathomable_curio/New(atom/parent, max_slots, max_specific_storage, max_total_storage, rustle_sound, remove_rustle_sound)
 	. = ..()
 	set_holdable(list(
-		/obj/item/ammo_box/strilka310/lionhunter,
-		/obj/item/heretic_labyrinth_handbook,
 		/obj/item/bodypart, // Bodyparts are often used in rituals.
-		/obj/item/clothing/neck/eldritch_amulet,
-		/obj/item/clothing/neck/heretic_focus,
-		/obj/item/codex_cicatrix,
-		/obj/item/eldritch_potion,
 		/obj/item/food/grown/poppy, // Used to regain a Living Heart.
 		/obj/item/food/grown/harebell, // Used to reroll targets
-		/obj/item/melee/rune_carver,
-		/obj/item/melee/sickly_blade,
 		/obj/item/organ, // Organs are also often used in rituals.
-		/obj/item/reagent_containers/cup/beaker/eldritch,
 		/obj/item/stack/sheet/glass, // Glass is often used by moon heretics
 	))

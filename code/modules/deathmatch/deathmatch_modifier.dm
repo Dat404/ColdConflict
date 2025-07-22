@@ -436,14 +436,6 @@
 	var/obj/item/implant/explosive/deathmatch/implant = new()
 	implant.implant(player, silent = TRUE, force = TRUE)
 
-/datum/deathmatch_modifier/helgrasp
-	name = "Helgrasped"
-	description = "Cursed hands are being thrown at you!"
-
-/datum/deathmatch_modifier/helgrasp/apply(mob/living/carbon/player, datum/deathmatch_lobby/lobby)
-	var/metabolism_rate = /datum/reagent/inverse/helgrasp/heretic::metabolization_rate
-	player.reagents.add_reagent(/datum/reagent/inverse/helgrasp/heretic, initial(lobby.map.automatic_gameend_time) / metabolism_rate)
-
 /datum/deathmatch_modifier/wasted
 	name = "Wasted"
 	description = "You've had one drink too many"

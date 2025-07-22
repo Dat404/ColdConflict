@@ -186,7 +186,6 @@
 	playsound(src,'sound/effects/magic/staff_change.ogg', 75, TRUE)
 	INVOKE_ASYNC(src, PROC_REF(summon_round_event), user) // Running the event sleeps
 	trigger_side_effects()
-	tear_reality()
 	SEND_SIGNAL(src, COMSIG_GRAND_RUNE_COMPLETE, cheese_sacrificed)
 	flick("[icon_state]_activate", src)
 	addtimer(CALLBACK(src, PROC_REF(remove_rune)), 0.6 SECONDS)
@@ -236,37 +235,6 @@
  * Invoking the ritual spawns up to three reality tears based on potency.
  * Each of these has a 50% chance to spawn already expended.
  */
-/obj/effect/grand_rune/proc/tear_reality()
-	var/max_tears = 0
-	switch(potency)
-		if(0 to 2)
-			max_tears = 1
-		if (3 to 5)
-			max_tears = 2
-		if (6 to 7)
-			max_tears = 3
-
-	var/to_create = rand(0, max_tears)
-	if (to_create == 0)
-		return
-	var/created = 0
-	var/location_sanity = 0
-	// Copied from the influences manager, but we don't want to obey the cap on influences per heretic.
-	while(created < to_create && location_sanity < 100)
-		var/turf/chosen_location = get_safe_random_station_turf_equal_weight()
-
-		// We don't want them close to each other - at least 1 tile of separation
-		var/list/nearby_things = range(1, chosen_location)
-		var/obj/effect/heretic_influence/what_if_i_have_one = locate() in nearby_things
-		var/obj/effect/visible_heretic_influence/what_if_i_had_one_but_its_used = locate() in nearby_things
-		if(what_if_i_have_one || what_if_i_had_one_but_its_used)
-			location_sanity++
-			continue
-
-		var/obj/effect/heretic_influence/new_influence = new(chosen_location)
-		if (prob(50))
-			new_influence.after_drain()
-		created++
 
 #undef GRAND_RUNE_INVOKES_TO_COMPLETE
 

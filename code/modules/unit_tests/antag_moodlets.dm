@@ -10,8 +10,7 @@
 	var/traitor_moodlet
 
 /datum/unit_test/antag_moodlets/Run()
-	var/mob/living/carbon/human/bad_man = allocate(/mob/living/carbon/human/consistent)
-	var/datum/antagonist/antag_heretic = /datum/antagonist/heretic
+	var/mob/living/carbon/human/bad_man = allocate(/mob/living/carbon/human/consistent
 	var/datum/antagonist/antag_traitor = /datum/antagonist/traitor
 	heretic_moodlet = initial(antag_heretic.antag_moodlet)
 	traitor_moodlet = initial(antag_traitor.antag_moodlet)

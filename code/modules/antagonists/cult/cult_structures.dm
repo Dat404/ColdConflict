@@ -99,13 +99,6 @@
 	. = ..()
 	setup_options()
 
-/obj/structure/destructible/cult/item_dispenser/rust_heretic_act()
-	visible_message(span_notice("[src] crumbles to dust. In its midst, you spot \a [initial(mansus_conversion_path.name)]."))
-	var/turf/turfy = get_turf(src)
-	new mansus_conversion_path(turfy)
-	turfy.rust_heretic_act()
-	return ..()
-
 /obj/structure/destructible/cult/item_dispenser/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
 	if(.)

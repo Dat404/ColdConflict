@@ -29,7 +29,6 @@
 		/obj/item/stack/tile/fakeice/loaded = 2,
 		/obj/item/stack/tile/fakepit/loaded = 2,
 		/obj/item/stack/tile/fakespace/loaded = 2,
-		/obj/item/storage/box/heretic_box = 2,
 		/obj/item/toy/balloon/corgi = 2,
 		/obj/item/toy/foamblade = 2,
 		/obj/item/toy/gun = 2,

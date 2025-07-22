@@ -19,7 +19,7 @@
 	ph = 8
 	overdose_threshold = 35
 	inverse_chem_val = 0.3
-	inverse_chem = /datum/reagent/inverse/helgrasp
+	inverse_chem = /datum/reagent/water //!!!
 	var/helbent = FALSE
 	var/reaping = FALSE
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED

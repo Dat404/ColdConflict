@@ -31,8 +31,6 @@
 	var/mob/living/master = target.mind.enslaved_to?.resolve()
 	if(master && !IS_CULTIST(master))
 		return FALSE
-	if(IS_HERETIC_OR_MONSTER(target))
-		return FALSE
 	if(HAS_MIND_TRAIT(target, TRAIT_UNCONVERTABLE) || issilicon(target) || isbot(target) || isdrone(target))
 		return FALSE //can't convert machines, shielded, or braindead
 	return TRUE

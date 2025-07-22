@@ -28,13 +28,6 @@
 /obj/item/nullrod/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/anti_magic, MAGIC_RESISTANCE|MAGIC_RESISTANCE_HOLY)
-	AddComponent(/datum/component/effect_remover, \
-		success_feedback = "You disrupt the magic of %THEEFFECT with %THEWEAPON.", \
-		success_forcesay = "BEGONE FOUL MAGIKS!!", \
-		tip_text = "Clear rune", \
-		on_clear_callback = CALLBACK(src, PROC_REF(on_cult_rune_removed)), \
-		effects_we_clear = list(/obj/effect/rune, /obj/effect/heretic_rune, /obj/effect/cosmic_rune), \
-	)
 	AddElement(/datum/element/bane, mob_biotypes = MOB_SPIRIT, damage_multiplier = 0, added_damage = 25, requires_combat_mode = FALSE)
 
 	if((!GLOB.holy_weapon_type || !station_holy_item) && type == /obj/item/nullrod)

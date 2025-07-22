@@ -13,7 +13,6 @@
 	light_range = 2
 	light_color = LIGHT_COLOR_LAVA
 	break_message = span_warning("The forge breaks apart into shards with a howling scream!")
-	mansus_conversion_path = /obj/structure/destructible/eldritch_crucible
 
 /obj/structure/destructible/cult/item_dispenser/forge/setup_options()
 	var/static/list/forge_items = list(
@@ -41,15 +40,7 @@
 		options += extra_item
 
 /obj/structure/destructible/cult/item_dispenser/forge/extra_options()
-	if(!cult_team?.unlocked_heretic_items[CURSED_BLADE_UNLOCKED])
-		return
-	return list(CURSED_BLADE = list(
-			PREVIEW_IMAGE = image(icon = 'icons/obj/weapons/khopesh.dmi', icon_state = "cursed_blade"),
-			OUTPUT_ITEMS = list(/obj/item/melee/sickly_blade/cursed),
-			RADIAL_DESC = "Smiths a [/obj/item/melee/sickly_blade/cursed::name], an upgraded dagger that can be broken for an emergency teleport.",
-			),
-	)
-
+	return
 
 /obj/structure/destructible/cult/item_dispenser/forge/succcess_message(mob/living/user, obj/item/spawned_item)
 	to_chat(user, span_cult_italic("You work [src] as dark knowledge guides your hands, creating [spawned_item]!"))
