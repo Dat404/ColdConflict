@@ -746,36 +746,6 @@
 /datum/memory/witnessed_russian_roulette/get_moods()
 	return list("[protagonist_name] [mood_verb] as they [result] the deadly game of roulette.")
 
-/// When a heretic finishes their ritual of knowledge
-/datum/memory/heretic_knowledge_ritual
-	story_value = STORY_VALUE_AMAZING
-	// Protagonist = heretic
-
-/datum/memory/heretic_knowledge_ritual/get_names()
-	return list("[protagonist_name] absorbing boundless knowledge through eldritch research.")
-
-/datum/memory/heretic_knowledge_ritual/get_starts()
-	return list(
-		"[protagonist_name] laying out a circle of green tar and candles",
-		"multiple books around [protagonist_name] flipping open",
-		"green and purple energy surrounding [protagonist_name]",
-		"[protagonist_name], eyes wide open and unblinking, reading a strange book",
-		"a pile of gore and viscera on a complex looking rune",
-		"a wide, strange looking circle, with [protagonist_name] sketching it"
-	)
-
-/datum/memory/heretic_knowledge_ritual/get_moods()
-	return list("[protagonist_name] [mood_verb] as their hand glows with power.")
-
-/datum/memory/heretic_knowledge_ritual/get_happy_moods()
-	return list("cackling madly")
-
-/datum/memory/heretic_knowledge_ritual/get_neutral_moods()
-	return list("staring blankly with a wide grin")
-
-/datum/memory/heretic_knowledge_ritual/get_sad_moods()
-	return list("cackling insanely")
-
 /// Failed to defuse a bomb, by triggering it early.
 /datum/memory/bomb_defuse_failure
 	story_value = STORY_VALUE_NONE // Anyone who gets this is probably dead

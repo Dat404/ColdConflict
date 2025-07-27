@@ -2797,46 +2797,6 @@
 		if(affected_mob.adjustStaminaLoss(-1 * REM * seconds_per_tick, updating_stamina = FALSE)) // the more wounds, the more stamina regen
 			return UPDATE_MOB_HEALTH
 
-// unholy water, but for heretics.
-// why couldn't they have both just used the same reagent?
-// who knows.
-// maybe nar'sie is considered to be too "mainstream" of a god to worship in the heretic community.
-/datum/reagent/eldritch
-	name = "Eldritch Essence"
-	description = "A strange liquid that defies the laws of physics. \
-		It re-energizes and heals those who can see beyond this fragile reality, \
-		but is incredibly harmful to the closed-minded. It metabolizes very quickly."
-	taste_description = "Ag'hsj'saje'sh"
-	self_consuming = TRUE //eldritch intervention won't be limited by the lack of a liver
-	color = "#1f8016"
-	metabolization_rate = 2.5 * REAGENTS_METABOLISM  //0.5u/second
-	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
-
-/datum/reagent/eldritch/on_mob_life(mob/living/carbon/drinker, seconds_per_tick, times_fired)
-	. = ..()
-	var/need_mob_update = FALSE
-	drinker.adjust_drowsiness(-10 * REM * seconds_per_tick)
-	drinker.AdjustAllImmobility(-40 * REM * seconds_per_tick)
-	need_mob_update += drinker.adjustStaminaLoss(-10 * REM * seconds_per_tick, updating_stamina = FALSE)
-	need_mob_update += drinker.adjustToxLoss(-2 * REM * seconds_per_tick, updating_health = FALSE, forced = TRUE)
-	need_mob_update += drinker.adjustOxyLoss(-2 * REM * seconds_per_tick, updating_health = FALSE)
-	need_mob_update += drinker.adjustBruteLoss(-2 * REM * seconds_per_tick, updating_health = FALSE)
-	need_mob_update += drinker.adjustFireLoss(-2 * REM * seconds_per_tick, updating_health = FALSE)
-	if(drinker.blood_volume < BLOOD_VOLUME_NORMAL)
-		drinker.blood_volume += 3 * REM * seconds_per_tick
-	need_mob_update = drinker.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3 * REM * seconds_per_tick, 150)
-	need_mob_update += drinker.adjustToxLoss(2 * REM * seconds_per_tick, updating_health = FALSE)
-	need_mob_update += drinker.adjustFireLoss(2 * REM * seconds_per_tick, updating_health = FALSE)
-	need_mob_update += drinker.adjustOxyLoss(2 * REM * seconds_per_tick, updating_health = FALSE)
-	need_mob_update += drinker.adjustBruteLoss(2 * REM * seconds_per_tick, updating_health = FALSE)
-	if(need_mob_update)
-		return UPDATE_MOB_HEALTH
-
-/datum/reagent/eldritch/expose_turf(turf/exposed_turf, reac_volume)
-	. = ..()
-	if ((reac_volume >= 1.5 || isplatingturf(exposed_turf)) && !HAS_TRAIT(exposed_turf, TRAIT_RUSTY))
-		exposed_turf.rust_turf()
-
 /datum/reagent/universal_indicator
 	name = "Universal Indicator"
 	description = "A solution that can be used to create pH paper booklets, or sprayed on things to colour them by their pH."

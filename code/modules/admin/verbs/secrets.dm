@@ -532,7 +532,7 @@ ADMIN_VERB(secrets, R_NONE, "Secrets", "Abuse harder than you ever have before w
 				if(are_we_antagstacking != "Confirm")
 					return
 
-			var/chosen_antag = tgui_input_list(usr, "Choose antag", "Chose antag", list(ROLE_TRAITOR, ROLE_CHANGELING, ROLE_HERETIC, ROLE_CULTIST, ROLE_NINJA, ROLE_WIZARD, ROLE_NIGHTMARE))
+			var/chosen_antag = tgui_input_list(usr, "Choose antag", "Chose antag", list(ROLE_TRAITOR, ROLE_CHANGELING, ROLE_NINJA, ROLE_WIZARD, ROLE_NIGHTMARE))
 			if(!chosen_antag)
 				return
 			var/objective = tgui_input_text(usr, "Enter an objective", "Objective")

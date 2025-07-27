@@ -120,11 +120,6 @@
 	mood_change = 10 //maybe being a cultist isn't that bad after all
 	hidden = TRUE
 
-/datum/mood_event/heretics
-	description = "THE HIGHER I RISE, THE MORE I SEE."
-	mood_change = 10 //maybe being a heretic isnt that bad after all
-	hidden = TRUE
-
 /datum/mood_event/rift_fishing
 	description = "THE MORE I FISH, THE HIGHER I RISE."
 	mood_change = 7

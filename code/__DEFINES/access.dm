@@ -187,9 +187,7 @@
 /// SYNDICATE
 #define ACCESS_SYNDICATE "syndicate"
 #define ACCESS_SYNDICATE_LEADER "syndicate_leader"
-/// BLOODCULT
-	//Special, for anything that's basically internal
-#define ACCESS_BLOODCULT "bloodcult"
+
 /// HUNTERS
 #define ACCESS_HUNTER "hunter"
 

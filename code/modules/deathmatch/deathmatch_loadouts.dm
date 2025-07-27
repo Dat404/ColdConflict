@@ -923,15 +923,6 @@
 	. = ..()
 	ADD_TRAIT(user, TRAIT_ACT_AS_CULTIST, REF(src))
 
-/datum/outfit/deathmatch_loadout/heresy
-	/// Grants the effects of these knowledges to the DMer
-	var/list/knowledge_to_grant
-
-/datum/outfit/deathmatch_loadout/heresy/pre_equip(mob/living/carbon/human/user, visuals_only)
-	. = ..()
-	ADD_TRAIT(user, TRAIT_ACT_AS_HERETIC, REF(src))
-	user.AddElement(/datum/element/leeching_walk)
-
 // Chaplain! No spells (other than smoke), but strong armor and weapons, and immune to others' spells
 
 /datum/outfit/deathmatch_loadout/holy_crusader

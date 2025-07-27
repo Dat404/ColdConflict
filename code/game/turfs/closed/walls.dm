@@ -312,13 +312,6 @@
 
 	add_overlay(dent_decals)
 
-/turf/closed/wall/rust_turf()
-	if(HAS_TRAIT(src, TRAIT_RUSTY))
-		ScrapeAway()
-		return
-
-	return ..()
-
 /turf/closed/wall/metal_foam_base
 	girder_type = /obj/structure/foamedmetal
 
