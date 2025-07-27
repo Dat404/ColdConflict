@@ -11,7 +11,6 @@
 #define ROLE_BROTHER "Blood Brother"
 #define ROLE_CHANGELING "Changeling"
 #define ROLE_CULTIST "Cultist"
-#define ROLE_HERETIC "Heretic"
 #define ROLE_MALF "Malf AI"
 #define ROLE_OPERATIVE "Operative"
 #define ROLE_TRAITOR "Traitor"
@@ -42,7 +41,6 @@
 #define ROLE_SUNWALKER "Sunwalker"
 
 // Latejoin roles
-#define ROLE_HERETIC_SMUGGLER "Heretic Smuggler"
 #define ROLE_PROVOCATEUR "Provocateur"
 #define ROLE_STOWAWAY_CHANGELING "Stowaway Changeling"
 #define ROLE_SYNDICATE_INFILTRATOR "Syndicate Infiltrator"

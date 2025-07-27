@@ -403,11 +403,6 @@
 	ACCESS_AWAY_SUPPLY, \
 )
 
-/// Weird internal Cult access that prevents non-cult from using their doors.  Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_SPECIAL)
-#define CULT_ACCESS list( \
-	ACCESS_BLOODCULT, \
-)
-
 /// Name for the Global region.
 #define REGION_ALL_GLOBAL "All"
 /// Used to seed the accesses_by_region list in SSid_access. A list of every single access in the game.
