@@ -398,88 +398,6 @@
 		"Without [deuteragonist_name], [protagonist_name] [mood_verb].",
 	)
 
-/// The revolution was triumphant!
-/// Given to head revs and those nearby when the revs win a revolution.
-/datum/memory/revolution_rev_victory
-	story_value = STORY_VALUE_LEGENDARY
-	memory_flags = MEMORY_FLAG_NOSTATIONNAME|MEMORY_CHECK_BLINDNESS|MEMORY_CHECK_DEAFNESS
-	// Protagonist - The head revolutionary that won the revolution
-
-/datum/memory/revolution_rev_victory/get_names()
-	return list("The revolution of [station_name()] by [protagonist_name].")
-
-/datum/memory/revolution_rev_victory/get_starts()
-	return list(
-		"[protagonist_name] raising the flag of the revolution over the corpses of the former dictators",
-		"a flag waving above a pile of corpses with [protagonist_name] standing over it",
-		"a poster that says [station_name()] with a cross in it, hailing in a new era",
-		"a statue of the former captain toppled over, with [protagonist_name] next to it",
-	)
-
-/datum/memory/revolution_rev_victory/get_moods()
-	return list(
-		"[protagonist_name] [mood_verb] at the fall of [station_name()].",
-		"[protagonist_name] [mood_verb] at the idea of the new era.",
-	)
-
-/// Given to heads of staff if they lose a revolution and are alive still.
-/datum/memory/revolution_heads_defeated
-	story_value = STORY_VALUE_NONE
-	memory_flags = MEMORY_FLAG_NOSTATIONNAME|MEMORY_SKIP_UNCONSCIOUS
-	// Protagonist - The head of staff that lost the revolution
-
-/datum/memory/revolution_heads_defeated/get_names()
-	return list("The defeat of [protagonist_name] at the hands of the revolution")
-
-/datum/memory/revolution_heads_defeated/get_starts()
-	return list(
-		"[protagonist_name] fleeing [station_name()] in shame due to the success of the revolution",
-		"[protagonist_name] looking at a camera feed of rampaging revolutionaries",
-		"a poster with [protagonist_name]'s face stratched out",
-	)
-
-/datum/memory/revolution_heads_defeated/get_moods()
-	return list(
-		"[protagonist_name] [mood_verb] at the fall of [station_name()].",
-		"[protagonist_name] [mood_verb] at their defeat.",
-	)
-
-/// Given to head revs for failing the revolution!
-/datum/memory/revolution_rev_defeat
-	story_value = STORY_VALUE_NONE
-	memory_flags = MEMORY_FLAG_NOSTATIONNAME|MEMORY_SKIP_UNCONSCIOUS
-	// Protagonist - The head revolutionary that lost the revolution
-
-/datum/memory/revolution_rev_defeat/get_names()
-	return list(
-		"The defeat of [protagonist_name] at the hands of the Nanotrasen",
-		"The end of [protagonist_name]'s glorious revolution",
-	)
-
-/datum/memory/revolution_rev_defeat/get_starts()
-	return list("[protagonist_name] fleeing [station_name()] in shame due to the failure of their revolution")
-
-/datum/memory/revolution_rev_defeat/get_moods()
-	return list("[protagonist_name] [mood_verb] at their defeat.")
-
-/// Given to heads of staff, and those around them, upon defeating the revolutionaries.
-/datum/memory/revolution_heads_victory
-	story_value = STORY_VALUE_AMAZING // Not as cool as a rev victory. Everyone loves underdog stories
-	memory_flags = MEMORY_FLAG_NOSTATIONNAME|MEMORY_SKIP_UNCONSCIOUS
-	// Protagonist - The head of staff that won the revolution
-
-/datum/memory/revolution_heads_victory/get_names()
-	return list("The success of [protagonist_name] and Nanotrasen over the hateful revolution")
-
-/datum/memory/revolution_heads_victory/get_starts()
-	return list(
-		"[protagonist_name] dusting off their hands in victory over the revoution",
-		"the banner of Nanotrasen flying on the bridge of [station_name()] with [protagonist_name] proudly beside it",
-	)
-
-/datum/memory/revolution_rev_defeat/get_moods()
-	return list("[protagonist_name] [mood_verb] over the defeat of the revolution by the hands of Nanotrasen.")
-
 /// Watched someone receive a commendation medal
 /datum/memory/received_medal
 	story_value = STORY_VALUE_AMAZING
@@ -894,18 +812,6 @@
 
 /datum/memory/dna_infusion/get_sad_moods()
 	return list("bitterly rejects their humanity")
-
-/// Who rev'd me, so if a mindreader reads a rev, they have a clue on who to hunt down
-/datum/memory/recruited_by_headrev
-
-/datum/memory/recruited_by_headrev/get_names()
-	return list("[protagonist_name] is converted into a revolutionary by [antagonist_name]")
-
-/datum/memory/recruited_by_headrev/get_starts()
-	return list(
-		"[protagonist_name]'s mind sets itself on a singular, violent purpose as they're flashed by [antagonist_name]: Kill the heads.",
-		"[antagonist_name] lifts an odd device to [protagonist_name]'s eyes and flashes him, imprinting murderous instructions.",
-	)
 
 /// Who converted into a blood brother
 /datum/memory/recruited_by_blood_brother

@@ -113,17 +113,6 @@
 	r_hand = /obj/item/gun/energy/recharge/ebow
 	shoes = /obj/item/clothing/shoes/magboots/advance
 
-/datum/outfit/rev_cutout
-	name = "Revolutionary Cutout"
-
-	uniform = /obj/item/clothing/under/color/grey
-	back = /obj/item/storage/backpack
-	gloves = /obj/item/clothing/gloves/color/yellow
-	mask = /obj/item/clothing/mask/gas
-	belt = /obj/item/storage/belt
-	l_hand = /obj/item/melee/baton/security/cattleprod
-	shoes = /obj/item/clothing/shoes/sneakers/black
-
 /datum/outfit/laser_tag/blue
 	name = "Laser Tag Blue"
 
