@@ -74,18 +74,6 @@
 /datum/dynamic_ruleset/roundstart/malf_ai/can_be_selected()
 	return ..() && !HAS_TRAIT(SSstation, STATION_TRAIT_HUMAN_AI)
 
-/datum/dynamic_ruleset/roundstart/blood_brother
-	name = "Blood Brothers"
-	config_tag = "Roundstart Blood Brothers"
-	preview_antag_datum = /datum/antagonist/brother
-	pref_flag = ROLE_BROTHER
-	weight = 5
-	max_antag_cap = list("denominator" = 29)
-	min_pop = 10
-
-/datum/dynamic_ruleset/roundstart/blood_brother/assign_role(datum/mind/candidate)
-	candidate.add_antag_datum(/datum/antagonist/brother)
-
 /datum/dynamic_ruleset/roundstart/changeling
 	name = "Changelings"
 	config_tag = "Roundstart Changeling"
