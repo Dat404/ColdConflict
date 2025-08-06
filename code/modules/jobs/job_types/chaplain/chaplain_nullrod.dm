@@ -259,25 +259,6 @@
 	hitsound = 'sound/items/weapons/rapierhit.ogg'
 	menu_description = "A sharp blade which partially penetrates armor. Very effective at butchering bodies. Can be worn on the back."
 
-/obj/item/nullrod/vibro/talking
-	name = "possessed blade"
-	desc = "When the station falls into chaos, it's nice to have a friend by your side."
-	icon = 'icons/obj/weapons/sword.dmi'
-	icon_state = "talking_sword"
-	inhand_icon_state = "talking_sword"
-	icon_angle = 45
-	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	worn_icon_state = "talking_sword"
-	attack_verb_continuous = list("chops", "slices", "cuts")
-	attack_verb_simple= list("chop", "slice", "cut")
-	hitsound = 'sound/items/weapons/rapierhit.ogg'
-	menu_description = "A sharp blade which partially penetrates armor. Able to awaken a friendly spirit to provide guidance. Very effective at butchering bodies. Can be worn on the back."
-
-/obj/item/nullrod/vibro/talking/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/spirit_holding)
-
 /obj/item/nullrod/vibro/talking/chainsword
 	name = "possessed chainsaw sword"
 	desc = "Suffer not a heretic to live."

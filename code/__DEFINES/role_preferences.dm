@@ -20,8 +20,6 @@
 // Midround roles
 #define ROLE_ABDUCTOR "Abductor"
 #define ROLE_ALIEN "Xenomorph"
-#define ROLE_BLOB "Blob"
-#define ROLE_BLOB_INFECTION "Blob Infection"
 #define ROLE_CHANGELING_MIDROUND "Changeling (Midround)"
 #define ROLE_FUGITIVE "Fugitive"
 #define ROLE_LONE_OPERATIVE "Lone Operative"
@@ -68,7 +66,6 @@
 /// This flag specifically is used as a generic catch-all antag ban
 #define ROLE_SYNDICATE "Syndicate"
 #define ROLE_EXPERIMENTAL_CLONER "Experimental Cloner"
-#define ROLE_FREE_BLOB "Free Blob"
 
 #define ROLE_CLOWN_OPERATIVE "Clown Operative"
 #define ROLE_FREE_GOLEM "Free Golem"

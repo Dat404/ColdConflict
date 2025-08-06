@@ -90,9 +90,6 @@
 	for(var/obj/structure/A in contents)
 		return 1
 
-/turf/open/floor/blob_act(obj/structure/blob/B)
-	return
-
 /turf/open/floor/attack_paw(mob/user, list/modifiers)
 	return attack_hand(user, modifiers)
 
