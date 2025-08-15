@@ -89,7 +89,6 @@
 		/obj/item/clothing/mask/balaclava,
 		/obj/item/clothing/head/costume/ushanka,
 		/obj/item/clothing/head/costume/cardborg,
-		/obj/item/clothing/head/costume/pirate,
 		/obj/item/clothing/head/cone,
 		)
 	hat = new hat(spawned_mob)

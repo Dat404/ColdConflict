@@ -816,7 +816,6 @@ DEFINE_BITFIELD(turret_flags, list(
 	stun_projectile = /obj/projectile/bullet/c10mm/ap
 	stun_projectile_sound = 'sound/items/weapons/gun/smg/shot.ogg'
 	armor_type = /datum/armor/syndicate_turret
-	faction = list(FACTION_PIRATE)
 
 /obj/machinery/porta_turret/syndicate/shuttle
 	scan_range = 9

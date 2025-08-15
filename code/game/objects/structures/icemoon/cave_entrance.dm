@@ -171,7 +171,7 @@ GLOBAL_LIST_INIT(ore_probability, list(
 		if(13)
 			new /obj/item/disk/design_disk/modkit_disc/mob_and_turf_aoe(loc)
 		if(14)
-			new /obj/item/disk/design_disk/modkit_disc/bounty(loc)
+			new /obj/item/disk/design_disk/modkit_disc/mob_and_turf_aoe(loc)
 		if(15)
 			new /obj/item/ship_in_a_bottle(loc)
 			new /obj/item/oar(loc)

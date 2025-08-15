@@ -643,8 +643,6 @@ GLOBAL_LIST_INIT(holiday_mail, list())
 	name = "Talk-Like-a-Pirate Day"
 	begin_day = 19
 	begin_month = SEPTEMBER
-	holiday_hat = /obj/item/clothing/head/costume/pirate
-	holiday_mail = list(/obj/item/clothing/head/costume/pirate)
 
 /datum/holiday/pirate/greet()
 	return "Ye be talkin' like a pirate today or else ye'r walkin' tha plank, matey!"

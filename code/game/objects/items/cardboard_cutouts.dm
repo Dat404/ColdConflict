@@ -355,12 +355,6 @@
 	applied_desc = "A cardboard cutout of a Changeling."
 	outfit = /datum/outfit/changeling
 
-/datum/cardboard_cutout/pirate
-	name = "Pirate"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of a space pirate."
-	outfit = /datum/outfit/pirate/space/captain/cardboard
-
 /datum/cardboard_cutout/ninja
 	name = "Space Ninja"
 	applied_name = "Unknown"

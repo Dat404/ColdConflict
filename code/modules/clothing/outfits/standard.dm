@@ -321,7 +321,6 @@
 	ears = /obj/item/radio/headset/headset_cent
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
-	head = /obj/item/clothing/head/costume/pirate/captain
 	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/centcom/soviet/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)

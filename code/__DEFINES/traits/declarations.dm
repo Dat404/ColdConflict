@@ -661,9 +661,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Halves the time of tying a tie.
 #define TRAIT_FAST_TYING "fast_tying"
 
-/// Sells for more money on the pirate bounty pad.
-#define TRAIT_HIGH_VALUE_RANSOM "high_value_ransom"
-
 /// Makes the user handcuff others faster
 #define TRAIT_FAST_CUFFING "fast_cuffing"
 

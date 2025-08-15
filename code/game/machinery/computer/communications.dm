@@ -851,13 +851,6 @@
 	message_admins("[ADMIN_LOOKUPFLW(hacker)] hacked a [name] located at [ADMIN_VERBOSEJMP(src)], resulting in: [picked_option]!")
 	hacker.log_message("hacked a communications console, resulting in: [picked_option].", LOG_GAME, log_globally = TRUE)
 	switch(picked_option)
-		if(HACK_PIRATE) // Triggers pirates, which the crew may be able to pay off to prevent
-			var/list/pirate_rulesets = list(
-				/datum/dynamic_ruleset/midround/pirates,
-				/datum/dynamic_ruleset/midround/pirates/heavy,
-			)
-			SSdynamic.force_run_midround(pick(pirate_rulesets))
-
 		if(HACK_FUGITIVES) // Triggers fugitives, which can cause confusion / chaos as the crew decides which side help
 			priority_announce(
 				"Attention crew: sector monitoring reports a jump-trace from an unidentified vessel destined for your system. Prepare for probable contact.",

@@ -37,13 +37,6 @@
 	APPRENTICE_HEALING, \
 )
 
-//Pirates
-
-///Minimum amount the pirates will demand
-#define PAYOFF_MIN 20000
-///How long pirates will wait for a response before attacking
-#define RESPONSE_MAX_TIME 2 MINUTES
-
 /// How long till a spessman should come back after being captured and sent to the holding facility (which some antags use)
 #define COME_BACK_FROM_CAPTURE_TIME 6 MINUTES
 
@@ -287,7 +280,6 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 	/datum/antagonist/fugitive_hunter,
 	/datum/antagonist/ninja,
 	/datum/antagonist/nukeop,
-	/datum/antagonist/pirate,
 	/datum/antagonist/wizard,
 ))
 
@@ -376,7 +368,6 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 #define ANTAG_GROUP_LEVIATHANS "Spaceborne Leviathans"
 #define ANTAG_GROUP_NINJAS "Ninja Clan"
 #define ANTAG_GROUP_OVERGROWTH "Invasive Overgrowth"
-#define ANTAG_GROUP_PIRATES "Pirate Crew"
 #define ANTAG_GROUP_SYNDICATE "Syndicate"
 #define ANTAG_GROUP_WIZARDS "Wizard Federation"
 #define ANTAG_GROUP_XENOS "Xenomorph Infestation"
