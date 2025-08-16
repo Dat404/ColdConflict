@@ -3,9 +3,6 @@
 /// This item is purchasable to traitors
 #define UPLINK_TRAITORS (1 << 0)
 
-/// Can be randomly given to spies for their bounties
-#define UPLINK_SPY (1 << 3)
-
 #define UPLINK_LONE_OP (1 << 4)
 
 /// Progression gets turned into a user-friendly form. This is just an abstract equation that makes progression not too large.
@@ -19,11 +16,6 @@
 /// Typepath used for uplink items which don't actually produce an item (essentially just a placeholder)
 /// Future todo: Make this not necessary / make uplink items support item-less items natively
 #define ABSTRACT_UPLINK_ITEM /obj/item/loot_table_maker
-
-/// Lower threshold for which an uplink items's TC cost is considered "low" for spy bounties picking rewards
-#define SPY_LOWER_COST_THRESHOLD 5
-/// Upper threshold for which an uplink items's TC cost is considered "high" for spy bounties picking rewards
-#define SPY_UPPER_COST_THRESHOLD 12
 
 /// Minimal cost for an item to be eligible for a discount
 #define TRAITOR_DISCOUNT_MIN_PRICE 4

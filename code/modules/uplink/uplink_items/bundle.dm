@@ -7,7 +7,6 @@
 	category = /datum/uplink_category/bundle
 	surplus = 0
 	cant_discount = TRUE
-	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 
 /datum/uplink_item/bundles_tc/random
 	name = "Random Item"
