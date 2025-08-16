@@ -451,20 +451,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /obj/item/reagent_containers/hypospray/cmo/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/reagent_containers/hypospray/cmo)
 
-/datum/objective_item/steal/nukedisc
-	name = "the nuclear authentication disk"
-	targetitem = /obj/item/disk/nuclear
-	excludefromjob = list(JOB_CAPTAIN)
-	difficulty = 5
-	steal_hint = "THAT disk - you know the one. Carried by the Captain at all times (hopefully). \
-		Difficult to miss, but if you can't find it, the Head of Security and Captain both have devices to track its precise location."
-
-/obj/item/disk/nuclear/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/disk/nuclear)
-
-/datum/objective_item/steal/nukedisc/check_special_completion(obj/item/disk/nuclear/N)
-	return !N.fake
-
 /datum/objective_item/steal/ablative
 	name = "an ablative trenchcoat"
 	targetitem = /obj/item/clothing/suit/hooded/ablative
@@ -503,21 +489,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 /obj/item/documents/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/documents) //Any set of secret documents. Doesn't have to be NT's
-
-/datum/objective_item/steal/nuke_core
-	name = "the heavily radioactive plutonium core from the onboard self-destruct"
-	valid_containers = list(/obj/item/nuke_core_container)
-	targetitem = /obj/item/nuke_core
-	exists_on_map = TRUE
-	difficulty = 4
-	steal_hint = "The core of the station's self-destruct device, found in the vault."
-
-/obj/item/nuke_core/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/nuke_core)
-
-/datum/objective_item/steal/nuke_core/New()
-	special_equipment += /obj/item/storage/box/syndie_kit/nuke
-	..()
 
 /datum/objective_item/steal/hdd_extraction
 	name = "the source code for Project Goon from the master R&D server mainframe"

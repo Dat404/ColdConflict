@@ -4,7 +4,6 @@
 
 /datum/uplink_item/role_restricted
 	category = /datum/uplink_category/role_restricted
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/role_restricted/haunted_magic_eightball
 	name = "Haunted Magic Eightball"
@@ -395,5 +394,4 @@
 	restricted = TRUE
 	refundable = FALSE
 	progression_minimum = 30 MINUTES
-	purchasable_from = parent_type::purchasable_from & ~UPLINK_SPY
 

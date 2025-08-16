@@ -51,7 +51,6 @@
 	item = /obj/item/storage/box/syndicate/bundle_a
 	cost = 20
 	stock_key = UPLINK_SHARED_STOCK_KITS
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/bundles_tc/bundle_b
 	name = "Syndi-kit Special"
@@ -62,7 +61,6 @@
 	item = /obj/item/storage/box/syndicate/bundle_b
 	cost = 20
 	stock_key = UPLINK_SHARED_STOCK_KITS
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
 /datum/uplink_item/bundles_tc/surplus
 	name = "Syndicate Surplus Crate"
@@ -71,7 +69,6 @@
 			Contents are sorted to always be worth 30 TC. The Syndicate will only provide one surplus item per agent."
 	item = /obj/structure/closet/crate // will be replaced in purchase()
 	cost = 20
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	stock_key = UPLINK_SHARED_STOCK_SURPLUS
 	/// Value of items inside the crate in TC
 	var/crate_tc_value = 30
@@ -160,5 +157,4 @@
 			The Syndicate will only provide one surplus item per agent."
 	cost = 20
 	item = /obj/item/syndicrate_key
-	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 	stock_key = UPLINK_SHARED_STOCK_SURPLUS

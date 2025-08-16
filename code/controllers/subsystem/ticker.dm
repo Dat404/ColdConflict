@@ -222,8 +222,6 @@ SUBSYSTEM_DEF(ticker)
 		return FALSE
 	if(SSshuttle.emergency && (SSshuttle.emergency.mode == SHUTTLE_ENDGAME))
 		return TRUE
-	if(GLOB.station_was_nuked)
-		return TRUE
 	return FALSE
 
 /datum/controller/subsystem/ticker/proc/setup()

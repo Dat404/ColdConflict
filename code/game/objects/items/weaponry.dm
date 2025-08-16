@@ -226,10 +226,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	START_PROCESSING(SSobj, src)
 
 /obj/item/claymore/highlander/Destroy()
-	if(nuke_disk)
-		nuke_disk.forceMove(get_turf(src))
-		nuke_disk.visible_message(span_warning("The nuke disk is vulnerable!"))
-		nuke_disk = null
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -262,8 +258,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/claymore/highlander/examine(mob/user)
 	. = ..()
 	. += "It has [!notches ? "nothing" : "[notches] notches"] scratched into the blade."
-	if(nuke_disk)
-		. += span_boldwarning("It's holding the nuke disk!")
 
 /obj/item/claymore/highlander/attack(mob/living/target, mob/living/user)
 	. = ..()

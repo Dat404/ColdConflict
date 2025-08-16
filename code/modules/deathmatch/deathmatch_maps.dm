@@ -116,7 +116,6 @@
 	allowed_loadouts = list(
 		/datum/outfit/deathmatch_loadout/battler/soldier, // First because its a good and easy loadout and is picked by default
 		/datum/outfit/deathmatch_loadout/battler/bloodminer,
-		/datum/outfit/deathmatch_loadout/battler/clown,
 		/datum/outfit/deathmatch_loadout/battler/cowboy,
 		/datum/outfit/deathmatch_loadout/battler/druid,
 		/datum/outfit/deathmatch_loadout/battler/enginer,
@@ -197,7 +196,6 @@
 		/datum/outfit/deathmatch_loadout/tider,
 		/datum/outfit/deathmatch_loadout/abductor,
 		/datum/outfit/deathmatch_loadout/chef/upgraded,
-		/datum/outfit/deathmatch_loadout/battler/clown/upgraded,
 		/datum/outfit/deathmatch_loadout/mime,
 		/datum/outfit/deathmatch_loadout/pete,
 	)

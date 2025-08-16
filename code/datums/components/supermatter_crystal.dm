@@ -307,20 +307,6 @@
 				message_admins("[atom_source] has consumed [consumed_object], [suspicion] [ADMIN_JMP(atom_source)].")
 			atom_source.investigate_log("has consumed [consumed_object] - [suspicion].", INVESTIGATE_ENGINE)
 
-		var/is_nuke = FALSE
-		if (consumed_object.type == /obj/item/nuke_core) // No subtypes, the supermatter sliver shouldn't trigger this
-			is_nuke = TRUE
-		else if (istype(consumed_object, /obj/machinery/nuclearbomb))
-			var/obj/machinery/nuclearbomb/bomb = consumed_object
-			is_nuke = !!bomb.core
-
-		if (is_nuke)
-			object_size = 10
-			radiation_range *= 2
-			matter_increase += 10000
-			damage_increase += 110
-			effects_calculated = TRUE
-
 		qdel(consumed_object)
 
 	if(!iseffect(consumed_object) && !effects_calculated)

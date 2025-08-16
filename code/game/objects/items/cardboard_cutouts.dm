@@ -256,12 +256,6 @@
 /datum/cardboard_cutout/traitor/get_name()
 	return pick("Unknown", "Captain")
 
-/datum/cardboard_cutout/nuclear_operative
-	name = "Nuclear Operative"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of a nuclear operative."
-	outfit = /datum/outfit/syndicate/full
-
 /datum/cardboard_cutout/nuclear_operative/get_name()
 	return pick("Unknown", "COMMS", "Telecomms", "AI", "stealthy op", "STEALTH", "sneakybeaky", "MEDIC", "Medic")
 

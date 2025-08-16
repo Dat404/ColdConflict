@@ -227,7 +227,6 @@
 #include "mutant_hands_consistency.dm"
 #include "mutant_organs.dm"
 #include "novaflower_burn.dm"
-#include "nuke_cinematic.dm"
 #include "omnitools.dm"
 #include "operating_table.dm"
 #include "orderable_items.dm"

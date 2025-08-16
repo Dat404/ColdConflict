@@ -605,10 +605,6 @@ SUBSYSTEM_DEF(dynamic)
 
 	SSticker.mode_result = "undefined"
 
-	// Something nuked the station - it wasn't nuke ops (they set their own via their rulset)
-	if(GLOB.station_was_nuked)
-		SSticker.news_report = STATION_NUKED
-
 	if(SSsupermatter_cascade.cascade_initiated)
 		SSticker.news_report = SUPERMATTER_CASCADE
 

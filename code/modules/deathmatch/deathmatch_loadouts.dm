@@ -231,7 +231,6 @@
 	head = /obj/item/reagent_containers/cup/bucket
 	shoes = /obj/item/clothing/shoes/chameleon/noslip
 	l_hand = /obj/item/pushbroom
-	l_pocket = /obj/item/reagent_containers/spray/waterflower/lube
 	backpack_contents = list(
 		/obj/item/grenade/chem_grenade/cleaner = 2,
 		/obj/item/restraints/legcuffs/beartrap = 3,
@@ -267,30 +266,6 @@
 	back = /obj/item/spear
 	belt = /obj/item/gun/magic/hook
 	head = /obj/item/clothing/head/utility/welding
-
-/datum/outfit/deathmatch_loadout/battler/clown
-	name = "DM: Clown"
-	display_name = "Clown (Man Of Honk)"
-	desc = "Who called this honking clown"
-
-	uniform = /datum/outfit/job/clown::uniform
-	belt = /datum/outfit/job/clown::belt
-	shoes = /datum/outfit/job/clown::shoes
-	mask = /datum/outfit/job/clown::mask
-	l_pocket = /datum/outfit/job/clown::l_pocket
-	back = /datum/outfit/job/clown::backpack
-	box = /datum/outfit/job/clown::box
-	implants = list(/obj/item/implant/sad_trombone)
-	l_pocket = /obj/item/melee/energy/sword/bananium
-	r_pocket = /obj/item/shield/energy/bananium
-	gloves = /obj/item/clothing/gloves/tackler/rocket
-	backpack_contents = list(
-		/obj/item/reagent_containers/spray/waterflower = 1,
-		/obj/item/instrument/bikehorn = 1,
-		/obj/item/bikehorn/airhorn = 1,
-		/obj/item/food/grown/banana = 3,
-		/obj/item/food/pie/cream = 2,
-		)
 
 /datum/outfit/deathmatch_loadout/battler/tgcoder //tg doesnt stand for tgstation dont ask
 	name = "Deathmatch: Coder"
@@ -677,16 +652,6 @@
 	r_hand = /obj/item/gun/energy/alien
 	belt = /obj/item/gun/energy/shrink_ray
 
-/datum/outfit/deathmatch_loadout/battler/clown/upgraded
-	name = "Deathmatch: Clown (Syndicate Gear)"
-	display_name = "Clown Commando"
-	desc = "They were bound to show up sooner or later."
-
-	shoes = /obj/item/clothing/shoes/clown_shoes/combat
-	r_hand = /obj/item/pneumatic_cannon/pie/selfcharge
-	l_hand = /obj/item/bikehorn/golden
-	box = /obj/item/storage/box/hug/reverse_revolver
-
 	backpack_contents = list(
 		/obj/item/paperplane/syndicate = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
@@ -694,7 +659,6 @@
 		/obj/item/food/grown/banana = 1,
 		/obj/item/food/pie/cream = 1,
 		/obj/item/dnainjector/clumsymut,
-		/obj/item/sbeacondrop/clownbomb,
 		)
 
 /datum/outfit/deathmatch_loadout/mime

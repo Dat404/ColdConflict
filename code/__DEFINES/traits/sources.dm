@@ -288,9 +288,6 @@
 /// Applied when the ai anchors itself
 #define AI_ANCHOR_TRAIT "ai_anchor"
 
-/// Trait from [/datum/antagonist/nukeop/clownop]
-#define CLOWNOP_TRAIT "clownop"
-
 #define ANALYZER_TRAIT "analyzer_trait"
 
 /// Trait from an organ being inside a bodypart

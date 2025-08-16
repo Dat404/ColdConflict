@@ -256,9 +256,6 @@ GLOBAL_LIST_INIT(ai_employers, list(
 /// Checks if the given mob is a changeling
 #define IS_CHANGELING(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/changeling))
 
-/// Checks if the given mob is a nuclear operative
-#define IS_NUKE_OP(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/nukeop))
-
 //Tells whether or not someone is a space ninja
 #define IS_SPACE_NINJA(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/ninja))
 
@@ -279,7 +276,6 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 	/datum/antagonist/fugitive,
 	/datum/antagonist/fugitive_hunter,
 	/datum/antagonist/ninja,
-	/datum/antagonist/nukeop,
 	/datum/antagonist/wizard,
 ))
 
@@ -361,7 +357,6 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 #define ANTAG_GROUP_ARACHNIDS "Arachnid Infestation"
 #define ANTAG_GROUP_ASHWALKERS "Ash Walkers"
 #define ANTAG_GROUP_BIOHAZARDS "Biohazards"
-#define ANTAG_GROUP_CLOWNOPS "Clown Operatives"
 #define ANTAG_GROUP_ERT "Emergency Response Team"
 #define ANTAG_GROUP_GLITCH "Digital Anomalies"
 #define ANTAG_GROUP_HORRORS "Eldritch Horrors"

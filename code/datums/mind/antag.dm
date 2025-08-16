@@ -169,13 +169,6 @@
 /// Link a new mobs mind to the creator of said mob. They will join any team they are currently on, and will only switch teams when their creator does.
 /datum/mind/proc/enslave_mind_to_creator(mob/living/creator)
 
-	if(IS_NUKE_OP(creator))
-		var/datum/antagonist/nukeop/converter = creator.mind.has_antag_datum(/datum/antagonist/nukeop,TRUE)
-		var/datum/antagonist/nukeop/N = new()
-		N.send_to_spawnpoint = FALSE
-		N.nukeop_outfit = null
-		add_antag_datum(N,converter.nuke_team)
-
 	enslaved_to = WEAKREF(creator)
 
 	SEND_SIGNAL(current, COMSIG_MOB_ENSLAVED_TO, creator)
