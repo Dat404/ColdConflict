@@ -210,27 +210,6 @@
 		vents += temp_vent
 	return vents
 
-/datum/dynamic_ruleset/midround/from_ghosts/nightmare
-	name = "Nightmare"
-	config_tag = "Nightmare"
-	preview_antag_datum = /datum/antagonist/nightmare
-	midround_type = LIGHT_MIDROUND
-	pref_flag = ROLE_NIGHTMARE
-	ruleset_flags = RULESET_INVADER
-	weight = 5
-	min_pop = 15
-	max_antag_cap = 1
-	signup_atom_appearance = /obj/item/light_eater
-
-/datum/dynamic_ruleset/midround/from_ghosts/nightmare/can_be_selected()
-	return ..() && !isnull(find_maintenance_spawn(atmos_sensitive = TRUE, require_darkness = TRUE))
-
-/datum/dynamic_ruleset/midround/from_ghosts/nightmare/assign_role(datum/mind/candidate)
-	candidate.add_antag_datum(/datum/antagonist/nightmare)
-	candidate.current.set_species(/datum/species/shadow/nightmare)
-	candidate.current.forceMove(find_maintenance_spawn(atmos_sensitive = TRUE, require_darkness = TRUE))
-	playsound(candidate.current, 'sound/effects/magic/ethereal_exit.ogg', 50, TRUE, -1)
-
 /datum/dynamic_ruleset/midround/from_ghosts/space_dragon
 	name = "Space Dragon"
 	config_tag = "Space Dragon"

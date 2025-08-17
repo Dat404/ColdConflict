@@ -240,16 +240,6 @@ repeatable_weight_decrease = 3
 repeatable = 1
 minimum_required_age = 0
 
-["Nightmare"]
-weight = 5
-min_pop = 15
-blacklisted_roles = []
-min_antag_cap = 1
-max_antag_cap = 1
-repeatable_weight_decrease = 2
-repeatable = 1
-minimum_required_age = 0
-
 ["Space Dragon"]
 weight.1 = 0
 weight.2 = 3

@@ -269,10 +269,6 @@
 		"min_players": 0,
 		"weight": 0
 	},
-	"Spawn Nightmare": {
-		"min_players": 20,
-		"weight": 10
-	},
 	"Lone Operative": {
 		"min_players": 0,
 		"weight": 0
